@@ -6,7 +6,7 @@ import java.text.NumberFormat;
 
 public class Inventory {
 		
-	private Supplier supplierInfo; // this wasn't in the UML diagram but I am pretty sure it's required here
+	private Supplier supplierInfo;
 	
 	private int inventoryId;
 	private String itemName;
