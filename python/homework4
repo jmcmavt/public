@@ -44,7 +44,7 @@ def task2():
 def task3():
 	source_port = 32700
 	while source_port < 32710:
-		task3_packet = IP(src=violet, dst=dest_ip)/TCP(sport=source_port,flags=22)/"team02"
+		task3_packet = IP(src=violet, dst=dest_ip)/TCP(sport=source_port,flags=7)/"team02"
 		send(task3_packet)
 		source_port = source_port + 1
 	
