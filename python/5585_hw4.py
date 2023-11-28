@@ -5,7 +5,7 @@ import time # you need this to implement the sleep function
 
 # vars
 
-source_1 = "1.1.1.1" # change these to an IP address in dotted decimal format
+source_1 = "1.1.1.1" # change these to an IP address in dotted decimal format and keep the quotes
 source_2 = "2.2.2.2" 
 destination_1 = "3.3.3.3"
 
