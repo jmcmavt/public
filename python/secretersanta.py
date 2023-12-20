@@ -6,12 +6,6 @@ from Crypto.Cipher import AES, PKCS1_v1_5 as Cipher_PKCS1_v1_5
 from Crypto.PublicKey import RSA
 from base64 import b64encode,b64decode
 
-# prompt for secret santa group names
-
-print("\n🎄🎄 Welcome to AI-powered Secret Santa. First, we need to get the names of each Secret Santa participant. 🎄🎄\n")
-
-# prompt for the name of a participant and accept it as input, for each name, ask if there is another participant with a y/n prompt
-
 ollama = Ollama(base_url="http://localhost:11434") # this is the default listening port for ollama
 
 def get_participants():
@@ -106,7 +100,7 @@ def encrypt_aes_with_rsa(aes_keys, this_keys_dict):
 		print(f"Encrypted AES Key for {p}: {cipher_text}\n")
 
 def main():
-	
+	print("\n🎄🎄 Welcome to AI-powered Secret Santa. First, we need to get the names of each Secret Santa participant. 🎄🎄\n")
 	participants = get_participants() # get a dict of names of participants for the secret santa
 	keys_dict = get_public_keys(participants) # using that dict, get their public keys for the value
 	participant_list = list(participants.keys()) # just get the names from the dict and turn them into a list
