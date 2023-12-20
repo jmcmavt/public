@@ -1,4 +1,4 @@
-# ECE 5585 HW4 Python Template
+# ECE 5585 HW4 Python Template - Permission granted to post publicly
 
 from scapy.all import *
 import time # you need this to implement the sleep function
