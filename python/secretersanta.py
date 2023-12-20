@@ -95,15 +95,12 @@ def encrypt_aes_with_rsa(aes_keys, this_keys_dict):
 	rsak = list(this_keys_dict.values())
 	part = list(this_keys_dict.keys())	
 	
-
 	for a,r,p in zip(aes_keys,rsak,part):
 		
 		keyDER = b64decode(r)
 		keyPub = RSA.importKey(keyDER)
 		cipher = Cipher_PKCS1_v1_5.new(keyPub)
-		
 		cipher_text = cipher.encrypt(a.encode())
-		
 		encrypted_aes = b64encode(cipher_text)
 	
 		print(f"Encrypted AES Key for {p}: {cipher_text}\n")
