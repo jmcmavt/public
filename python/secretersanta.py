@@ -66,7 +66,7 @@ def encrypt_message(plist, message):
 		key_encoded = bytes(key_plain,'UTF-8')
 		message_encoded = bytes(m,'UTF-8')
 		
-		# print(f"{key_plain} is the AES key for {p}\n") uncomment if you want to know the key
+		# print(f"{key_plain} is the AES key for {p}\n") uncomment if you want to know the key, but what's the fun in that
 		
 		keys_plain.append(key_plain)
 		cipher = AES.new(key_encoded, AES.MODE_EAX)
