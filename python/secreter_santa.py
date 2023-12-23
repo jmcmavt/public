@@ -62,11 +62,11 @@ def encrypt_message(plist, message):
 	
 	for p,m in zip(plist, message):
 		
-		key_plain = ''.join(random.choices(string.ascii_lowercase + string.digits, k=16))
+		key_plain = ''.join(random.choices(string.ascii_lowercase + string.digits, k=16)) # makes a random AES key
 		key_encoded = bytes(key_plain,'UTF-8')
 		message_encoded = bytes(m,'UTF-8')
 		
-		# print(f"{key_plain} is the AES key for {p}\n") uncomment if you want to know the key, but what's the fun in that
+		# print(f"{key_plain} is the AES key for {p}\n") uncomment this if you want to know the key for testing
 		
 		keys_plain.append(key_plain)
 		cipher = AES.new(key_encoded, AES.MODE_EAX)
@@ -91,13 +91,13 @@ def encrypt_aes_with_rsa(aes_keys, this_keys_dict):
 	
 	for a,r,p in zip(aes_keys,rsak,part):
 		
-		keyDER = b64decode(r)
-		keyPub = RSA.importKey(keyDER)
-		cipher = Cipher_PKCS1_v1_5.new(keyPub)
+		key_der = b64decode(r) # key format
+		public_key = RSA.importKey(key_der)
+		cipher = Cipher_PKCS1_v1_5.new(public_key)
 		cipher_text = cipher.encrypt(a.encode())
 		encrypted_aes = b64encode(cipher_text)
 	
-		print(f"Encrypted AES Key for {p}: {cipher_text}\n")
+		print(f"Encrypted AES Key for {p}: {encrypted_aes}\n")
 
 def main():
 	print("\n🎄🎄 Welcome to AI-powered Secret Santa. First, we need to get the names of each Secret Santa participant. 🎄🎄\n")
