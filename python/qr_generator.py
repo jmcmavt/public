@@ -1,6 +1,6 @@
 import qrcode
 
-target_url = input("Please enter the URL you want to convert into a QR code: ")
+target_url = input("Please enter the URL you want to convert into a QR code, e.g., your LinkedIn URL: ")
 
 qr = qrcode.QRCode(
   version = 3,
