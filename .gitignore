@@ -1,0 +1,93 @@
+# macOS / Windows filesystem noise
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE local state
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+out/
+bin/
+
+# Shell / runtime output
+*.log
+*.pid
+*.seed
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Archives and generated packages
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.secret
+*.secrets
+secrets/
+private/
+
+# Credentials, certificates, and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.kdbx
+
+# Cloud and tool credentials
+.aws/
+.azure/
+.gcloud/
+.gnupg/
+.netrc
+credentials.json
+service-account*.json
+*service_account*.json
+
+# Security scan and dependency audit output
+.trivycache/
+.semgrep/
+bandit-report.*
+safety-report.*
