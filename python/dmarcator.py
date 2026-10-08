@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+print("dmarcator.py is a free tool offered by joseph mcmahon, 2026. https://joemac.io")
 """
 dmarcator.py is a free tool offered by joseph mcmahon. https://joemac.io
 
